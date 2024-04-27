@@ -6,37 +6,19 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
     <title>React and NextJS</title>
   </head>
   <body>
     <div id="app"></div>
-    <script>
-      const app = document.getElementById("app");
-
-      /* --- Method-1 (Performant)
-        //   Create new h1 element in JavaScript
-        const heading = document.createElement("h1");
-
-        //   Create a new text node for the HTML element
-        const text = document.createTextNode("Develop. Preview. Ship. 🚀");
-
-        //   Append the text to the h1 element
-        heading.appendChild(text);
-
-        //   Place the h1 within the div
-        app.appendChild(heading);
-    ---*/
-
-      /* Method-2: Less Performant than the first one, destruction, re-creation happens
-      const heading = `<h1>Develop. Preview. Ship. 🚀</h1>`;
-      app.innerHTML = heading;
-      */
-
-      /* --- Method-3 (Not performant but for small code it words fine) --- */
-      const heading = `<h1>Develop. Preview. Ship. 🚀</h1>`;
-      app.insertAdjacentHTML("beforeend", heading); // beforeend means insert as the last child of the element
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel Script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+      const domNode = document.getElementById("app");
+      const root = ReactDOM.createRoot(domNode);
+      root.render(<h1>Develop. Preview. Ship. 🚀</h1>);
     </script>
   </body>
 </html>
