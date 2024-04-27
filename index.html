@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>React and NextJS</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      const app = document.getElementById("app");
+
+      //   //   Create new h1 element in JavaScript
+      //   const heading = document.createElement("h1");
+
+      //   //   Create a new text node for the HTML element
+      //   const text = document.createTextNode("Develop. Preview. Ship. 🚀");
+
+      //   //   Append the text to the h1 element
+      //   heading.appendChild(text);
+
+      //   //   Place the h1 within the div
+      //   app.appendChild(heading);
+
+      const heading = `<h1>Develop. Preview. Ship. 🚀</h1>`;
+      app.innerHTML = heading;
+    </script>
+  </body>
+</html>
